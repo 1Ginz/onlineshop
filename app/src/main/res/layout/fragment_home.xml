@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/home2"
+                android:layout_width="match_parent"
+                android:layout_height="456dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                >
+            </ImageView>
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="308dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sale 3/3 cực sốc"
+                    android:textColor="@color/white"
+                    android:textFontWeight="@integer/material_motion_duration_medium_2"
+                    android:textSize="30dp"></TextView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Xem"></Button>
+            </LinearLayout>
+
+
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gợi ý cho bạn"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_alignParentLeft="true"
+                    ></TextView>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xem tất cả>"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_alignParentEnd="true"
+                    ></TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/product_recycler"
+                    android:layout_width="0dp"
+                    android:layout_height="500dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:listitem="@layout/products_row_item" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
